@@ -1,7 +1,5 @@
 # icka
 
-irccloud keep-alive
-
 ## usage
 
 ```sh
