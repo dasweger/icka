@@ -21,4 +21,4 @@ jobs:
         env:
           ICKA_EMAIL: ${{ secrets.ICKA_EMAIL }}
           ICKA_PASSWORD: ${{ secrets.ICKA_PASSWORD }}
-        run: icka
+        run: /home/runner/go/bin/icka
