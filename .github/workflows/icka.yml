@@ -1,0 +1,23 @@
+name: icka
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  repository_dispatch:
+      
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-go@v1
+        with:
+          go-version: '1.16.5'
+      - run: make
+      - run: make install
+
+      - name: icka
+        env:
+          ICKA_EMAIL: ${{ secrets.ICKA_EMAIL }}
+          ICKA_PASSWORD: ${{ secrets.ICKA_PASSWORD }}
+        run: /home/runner/go/bin/icka
