@@ -1,7 +1,10 @@
-icka
+# icka
 
 irccloud keep-alive
 
+## usage
+
+```sh
 # build and install
 $ make
 $ make install
@@ -14,3 +17,4 @@ $ ICKA_EMAIL=<email> ICKA_PASSWORD=<password> icka
 
 # run once every hour, without exiting
 $ icka -email <email> -password <password> -forever
+```
