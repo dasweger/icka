@@ -9,8 +9,8 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-go@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
         with:
           go-version: '1.16.5'
       - run: make
@@ -20,4 +20,4 @@ jobs:
         env:
           ICKA_EMAIL: ${{ secrets.ICKA_EMAIL }}
           ICKA_PASSWORD: ${{ secrets.ICKA_PASSWORD }}
-        run: /home/runner/go/bin/icka
+        run: icka
